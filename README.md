@@ -27,6 +27,9 @@ chmod +x toolbox.sh
 ./toolbox.sh -b -l # build and then load, use -h for help
 ```
 
+### Features added
+
+Ragebot
 
 ## Basic toolbox.sh usage
 
