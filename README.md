@@ -37,7 +37,7 @@ yeah it's a shitty fork....
 git clone https://github.com/k0ez13/N3WTuX
 cd N3WTuX
 chmod +x toolbox.sh
-./toolbox.sh -p -b -l # pull, build and then load, use -h for help
+./toolbox.sh -b -l # pull, build and then load, use -h for help
 ```
 
 
