@@ -34,10 +34,10 @@ yeah it's a shitty fork....
 ```sudo zypper install gcc gdb SDL2-devel cmake git llvm-clang llvm-gold```
 
 ```sh
-git clone https://github.com/k0ez13/N3WTuX
-cd N3WTuX
+git clone https://github.com/calebrwalk5/BetterCS
+cd BetterCS
 chmod +x toolbox.sh
-./toolbox.sh -b -l # pull, build and then load, use -h for help
+./toolbox.sh -b -l # build and then load, use -h for help
 ```
 
 
