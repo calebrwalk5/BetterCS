@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/lsx/menu.png" alt="N3WTuX">
+  <img src="/lsx/menu.png" alt="BetterCS>
 </p>
 
 ### How to use
