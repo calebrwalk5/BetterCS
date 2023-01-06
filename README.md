@@ -57,6 +57,3 @@ Special thanks to the Fuzion For Panaroma Update And For Quality Codes > https:/
 Special thanks to the Nimbus project > https://github.com/NimbusProjects/Nimbus
 
 Special thanks to the Gamesneeze ORIGINAL owner of this project > https://github.com/seksea/gamesneeze
-
-
-### Thank you
