@@ -1,6 +1,7 @@
 <p align="center">
   <img src="/lsx/menu.png" alt="BetterCS>
 </p>
+                                </center>
 
 ### How to use
 
