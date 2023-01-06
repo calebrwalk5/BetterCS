@@ -134,7 +134,7 @@ void Menu::onSwapWindow(SDL_Window* window)
 void Menu::drawMenu() 
 {
     ImGui::SetNextWindowSize(ImVec2{1100, 620});
-    ImGui::Begin("N3WTuX", NULL,  ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse);
+    ImGui::Begin("BetterCS", NULL,  ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse);
     auto bWidth = ImVec2(119, 90); //115 20
     ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(2, 5));
 
@@ -147,23 +147,24 @@ void Menu::drawMenu()
         Menu::tabSelected = 0;
     } //ImGui::SameLine();
 
-    //ImGui::GetStyle().Colors[ImGuiCol_Button] = (Menu::tabSelected == 1) ? ImVec4(0.05f, 0.41f, 0.06f, 0.62f) : ImVec4(0.03f, 0.23f, 0.04f, 0.62f);
-    //if (ImGui::Button("Rage", bWidth)) {
-    //    Menu::tabSelected = 1;
-    //} ImGui::SameLine();*
-
-    ImGui::GetStyle().Colors[ImGuiCol_Button] = (Menu::tabSelected == 2) ? ImVec4(0.011f, 0.305f, 0.970f, 0.62f) : ImVec4(0.011f, 0.305f, 0.970f, 0.62f);
+    ImGui::GetStyle().Colors[ImGuiCol_Button] = (Menu::tabSelected == 1) ? ImVec4(0.011f, 0.305f, 0.970f, 0.62f) : ImVec4(0.03f, 0.23f, 0.04f, 0.62f);
     if (ImGui::Button("Visuals", bWidth)) 
     {
         Menu::tabSelected = 1;
     } //ImGui::SameLine();
 
-    ImGui::GetStyle().Colors[ImGuiCol_Button] = (Menu::tabSelected == 3) ? ImVec4(0.011f, 0.305f, 0.970f, 0.62f) : ImVec4(0.011f, 0.305f, 0.970f, 0.62f);
+    ImGui::GetStyle().Colors[ImGuiCol_Button] = (Menu::tabSelected == 2) ? ImVec4(0.011f, 0.305f, 0.970f, 0.62f) : ImVec4(0.011f, 0.305f, 0.970f, 0.62f);
     if (ImGui::Button("Misc", bWidth)) 
     {
         Menu::tabSelected = 2;
     }
     ImGui::GetStyle().Colors[ImGuiCol_Button] = ImVec4(0.011f, 0.305f, 0.970f, 0.62f);
+
+    ImGui::GetStyle().Colors[ImGuiCol_Button] = (Menu::tabSelected == 4) ? ImVec4(0.05f, 0.41f, 0.06f, 0.62f) : ImVec4(0.03f, 0.23f, 0.04f, 0.62f);
+    if (ImGui::Button("Rage", bWidth)) {
+        Menu::tabSelected = 4;
+    }
+    // ImGui::SameLine();
     ImGui::PopStyleVar();
 
     ImGui::EndChild();
@@ -189,9 +190,12 @@ void Menu::drawMenu()
         {
             Menu::drawMiscTab(); break;
         }
-        ///case 3: {
-          //  Menu::drawMiscTab();break;
-        //}
+        case 3: {
+            Menu::drawRageTab();break;
+        }
+        case 4: {
+            Menu::drawRageTab();break;
+        }
     }
     ImGui::EndChild();
 

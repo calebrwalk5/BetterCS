@@ -14,7 +14,7 @@ namespace Menu {
     inline bool demoWindow = false;
 
 
-    inline char clantag[128] = "gamesneeze";
+    inline char clantag[128] = "BetterCS";
     void drawMenu();
     void drawLegitTab();
     void drawRageTab();

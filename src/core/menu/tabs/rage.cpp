@@ -1,4 +1,4 @@
-/*#include "../menu.hpp"
+#include "../menu.hpp"
 
 const char* antiAimTypes[] = {"None", "Static", "Jitter", "Fake Jitter", "Real Jitter", "SpingBot (p100)"};
 
@@ -136,4 +136,3 @@ void Menu::drawRageTab() {
         ImGui::EndChild();
     }
 }
-*/

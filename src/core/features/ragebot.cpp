@@ -1,4 +1,4 @@
-/*#include "../../includes.hpp"
+#include "../../includes.hpp"
 #include "features.hpp"
 
 void Features::RageBot::createMove(CUserCmd* cmd) {
@@ -46,4 +46,3 @@ void Features::RageBot::createMove(CUserCmd* cmd) {
         }
     }
 }
-*/
