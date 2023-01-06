@@ -217,7 +217,7 @@ mv libN3WTuX.so "$(cat build_id)"
 }
 
 function pull {
-    git pull
+    echo "Feature still in development..."
 }
 
 while [[ $# -gt 0 ]]
@@ -247,7 +247,7 @@ case $keys in
     -h|--help)
         echo "
  help
-Toolbox script for N3WTuX the beste lincuck cheat 2021
+Toolbox script for BetterCS the beste lincucks cheat 2023
 =======================================================================
 | Argument             | Description                                  |
 | -l (--load)          | Load/inject the cheat via gdb.               |
