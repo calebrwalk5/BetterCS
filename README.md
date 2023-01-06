@@ -20,7 +20,7 @@
 
 ```sudo zypper install gcc gdb SDL2-devel cmake git llvm-clang llvm-gold```
 
-```sh
+```
 git clone https://github.com/calebrwalk5/BetterCS
 cd BetterCS
 chmod +x toolbox.sh
