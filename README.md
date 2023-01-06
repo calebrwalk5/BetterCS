@@ -2,19 +2,6 @@
   <img src="/lsx/menu.png" alt="N3WTuX">
 </p>
 
-### Features added
-.so changer name on every new build
-
-another injection method
-
-menu with changed colors and tabs
-
-some features removed and others added
-
-yeah it's a shitty fork....
-
-
-
 ### How to use
 
 ### Debian / Ubuntu / Pop OS / Linux Mint required packages:
@@ -67,3 +54,6 @@ Special thanks to the Fuzion For Panaroma Update And For Quality Codes > https:/
 Special thanks to the Nimbus project > https://github.com/NimbusProjects/Nimbus
 
 Special thanks to the Gamesneeze ORIGINAL owner of this project > https://github.com/seksea/gamesneeze
+
+
+### Thank you
