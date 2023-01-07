@@ -15,5 +15,5 @@ def hex_to_imgui_rgba(hex_code: str) -> tuple:
     return (r, g, b, 1.0)
 
 # Example usage:
-rgba = hex_to_imgui_rgba('#0249f9')
+rgba = hex_to_imgui_rgba('#719099')
 print(rgba)

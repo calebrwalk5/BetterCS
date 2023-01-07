@@ -134,7 +134,7 @@ void style() {
         Menu::tabSelected = 0;
       } //ImGui::SameLine();
 
-      ImGui::GetStyle().Colors[ImGuiCol_Button] = (Menu::tabSelected == 1) ? ImVec4(0.444f, 0.600f, 1.000f, 1.00f) : ImVec4(0.03f, 0.23f, 0.04f, 0.62f);
+      ImGui::GetStyle().Colors[ImGuiCol_Button] = (Menu::tabSelected == 1) ? ImVec4(0.444f, 0.600f, 1.000f, 1.00f) : ImVec4(0.44313725490196076f, 0.5647058823529412f, 0.6f, 1.0f);
       if (ImGui::Button("Visuals", bWidth)) {
         Menu::tabSelected = 1;
       } //ImGui::SameLine();
@@ -145,7 +145,7 @@ void style() {
       }
       ImGui::GetStyle().Colors[ImGuiCol_Button] = ImVec4(0.444f, 0.600f, 1.000f, 1.00f);
 
-      ImGui::GetStyle().Colors[ImGuiCol_Button] = (Menu::tabSelected == 4) ? ImVec4(0.00784313725490196, 0.28627450980392155, 0.9764705882352941, 1.0) : ImVec4(0.03f, 0.23f, 0.04f, 0.62f);
+      ImGui::GetStyle().Colors[ImGuiCol_Button] = (Menu::tabSelected == 4) ? ImVec4(0.00784313725490196, 0.28627450980392155, 0.9764705882352941, 1.0) : ImVec4(0.44313725490196076f, 0.5647058823529412f, 0.6f, 1.0f);
       if (ImGui::Button("Rage", bWidth)) {
         Menu::tabSelected = 4;
       }
