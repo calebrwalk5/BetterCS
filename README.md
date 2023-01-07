@@ -7,3 +7,6 @@ git clone https://github.com/calebrwalk5/BetterCS
 cd BetterCS
 bash toolbox.sh -b -l
 ```
+### Changes made
+Ragebot added<br>
+Updated colors<br>
