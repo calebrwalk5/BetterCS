@@ -1593,6 +1593,30 @@ src/core/menu/tabs/rage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3WTuX.dir/build.make CMakeFiles/N3WTuX.dir/src/core/menu/tabs/rage.cpp.s
 .PHONY : src/core/menu/tabs/rage.cpp.s
 
+src/core/menu/tabs/skinchanger.o: src/core/menu/tabs/skinchanger.cpp.o
+.PHONY : src/core/menu/tabs/skinchanger.o
+
+# target to build an object file
+src/core/menu/tabs/skinchanger.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3WTuX.dir/build.make CMakeFiles/N3WTuX.dir/src/core/menu/tabs/skinchanger.cpp.o
+.PHONY : src/core/menu/tabs/skinchanger.cpp.o
+
+src/core/menu/tabs/skinchanger.i: src/core/menu/tabs/skinchanger.cpp.i
+.PHONY : src/core/menu/tabs/skinchanger.i
+
+# target to preprocess a source file
+src/core/menu/tabs/skinchanger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3WTuX.dir/build.make CMakeFiles/N3WTuX.dir/src/core/menu/tabs/skinchanger.cpp.i
+.PHONY : src/core/menu/tabs/skinchanger.cpp.i
+
+src/core/menu/tabs/skinchanger.s: src/core/menu/tabs/skinchanger.cpp.s
+.PHONY : src/core/menu/tabs/skinchanger.s
+
+# target to generate assembly for a file
+src/core/menu/tabs/skinchanger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3WTuX.dir/build.make CMakeFiles/N3WTuX.dir/src/core/menu/tabs/skinchanger.cpp.s
+.PHONY : src/core/menu/tabs/skinchanger.cpp.s
+
 src/core/menu/tabs/visuals.o: src/core/menu/tabs/visuals.cpp.o
 .PHONY : src/core/menu/tabs/visuals.o
 
@@ -1977,6 +2001,9 @@ help:
 	@echo "... src/core/menu/tabs/rage.o"
 	@echo "... src/core/menu/tabs/rage.i"
 	@echo "... src/core/menu/tabs/rage.s"
+	@echo "... src/core/menu/tabs/skinchanger.o"
+	@echo "... src/core/menu/tabs/skinchanger.i"
+	@echo "... src/core/menu/tabs/skinchanger.s"
 	@echo "... src/core/menu/tabs/visuals.o"
 	@echo "... src/core/menu/tabs/visuals.i"
 	@echo "... src/core/menu/tabs/visuals.s"

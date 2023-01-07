@@ -1,4 +1,4 @@
-/*#include "features.hpp"
+#include "features.hpp"
 #include "../../includes.hpp"
 
 void Features::SkinChanger::frameStageNotify(FrameStage frame) {
@@ -34,6 +34,4 @@ void Features::SkinChanger::frameStageNotify(FrameStage frame) {
             //Log::log(WARN, "itemDefinitionIndex %d not found!", ((Weapon*)ent)->itemIndex());
         }
     }
-}*/
-
-
+}

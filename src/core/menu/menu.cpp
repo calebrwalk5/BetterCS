@@ -149,6 +149,11 @@ void style() {
       if (ImGui::Button("Rage", bWidth)) {
         Menu::tabSelected = 4;
       }
+
+      ImGui::GetStyle().Colors[ImGuiCol_Button] = (Menu::tabSelected == 5) ? ImVec4(0.00784313725490196, 0.28627450980392155, 0.9764705882352941, 1.0) : ImVec4(0.44313725490196076f, 0.5647058823529412f, 0.6f, 1.0f);
+      if (ImGui::Button("Skin Changer", bWidth)) {
+        Menu::tabSelected = 5;
+      }
       // ImGui::SameLine();
       ImGui::PopStyleVar();
 
@@ -179,6 +184,10 @@ void style() {
       }
       case 4: {
         Menu::drawRageTab();
+        break;
+      } 
+      case 5: {
+        Menu::drawSkinChangerTab();
         break;
       }
       }
