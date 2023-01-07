@@ -9,4 +9,5 @@ bash toolbox.sh -b -l
 ```
 ### Changes made
 Ragebot added<br>
+Skin changer added<br>
 Updated colors<br>
