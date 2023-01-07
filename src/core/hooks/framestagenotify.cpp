@@ -6,7 +6,7 @@ void Hooks::FrameStageNotify::hook(void* thisptr, FrameStage frame) {
     //Features::ClantagChanger::frameStageNotify(frame);
     //Features::SkyboxChanger::frameStageNotify(frame);
     Features::RecoilCrosshair::frameStageNotify(frame);
-   // Features::SkinChanger::frameStageNotify(frame);
+    Features::SkinChanger::frameStageNotify(frame);
     Features::NoFlash::frameStageNotify(frame);
     //Features::RagdollGravity::frameStageNotify(frame);
     Features::NoVisualRecoil::frameStageNotify(frame);

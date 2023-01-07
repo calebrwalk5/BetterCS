@@ -1,4 +1,4 @@
-/*#include "../../includes.hpp"
+#include "../../includes.hpp"
 #include "hooks.hpp"
 #include <SDL2/SDL_scancode.h>
 #include <algorithm>
@@ -18,4 +18,4 @@ void Hooks::ClientCmd::hook(void* thisptr, char* szCmdString) {
     }
 
     original(thisptr, szCmdString);
-}*/
+}

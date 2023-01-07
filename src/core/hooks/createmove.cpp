@@ -27,8 +27,8 @@ bool Hooks::CreateMove::hook(void* thisptr, float flInputSampleTime, CUserCmd* c
 
             Features::Prediction::start(cmd);
                 if (CONFIGBOOL("Rage>Enabled")) {
-                    //Features::RageBot::createMove(cmd);
-                    //Features::AntiAim::createMove(cmd);
+                    Features::RageBot::createMove(cmd);
+                    Features::AntiAim::createMove(cmd);
                 }
                 else {
                     Features::LegitBot::createMove(cmd);
@@ -45,7 +45,7 @@ bool Hooks::CreateMove::hook(void* thisptr, float flInputSampleTime, CUserCmd* c
                 cmd->buttons |= (1 << 5);
             }*/
         endMovementFix(cmd);
-	   // Features::SlowWalk::createMove(cmd);
+	    //Features::SlowWalk::createMove(cmd);
 
         auto view_backup = cmd->viewangles;
         Features::Movement::edgeBugPredictor(cmd);
