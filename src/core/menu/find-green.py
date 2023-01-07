@@ -1,3 +1,4 @@
+code = """
 #include "menu.hpp"
 
 #include "imgui/imgui.h"
@@ -6,7 +7,6 @@
 
 
 void style() {
-    ImVec4* colors = ImGui::GetStyle().Colors;
     colors[ImGuiCol_Text] = ImVec4(0.85f, 0.65f, 0.05f, 1.00f);
     colors[ImGuiCol_TextDisabled] = ImVec4(0.50f, 0.50f, 0.50f, 1.00f);
     colors[ImGuiCol_WindowBg] = ImVec4(0.06f, 0.06f, 0.06f, 1.00f);
@@ -52,71 +52,7 @@ void style() {
     colors[ImGuiCol_NavWindowingHighlight] = ImVec4(1.00f, 1.00f, 1.00f, 0.70f); 
     colors[ImGuiCol_NavWindowingDimBg] = ImVec4(0.80f, 0.80f, 0.80f, 0.20f); 
     colors[ImGuiCol_ModalWindowDimBg] = ImVec4(0.80f, 0.80f, 0.80f, 0.35f); 
-    colors[ImGuiCol_Header] = ImVec4(0.00784313725490196, 0.28627450980392155, 0.9764705882352941, 1.0);
-
-    ImGui::GetStyle().ScrollbarSize = 8;
-    ImGui::GetStyle().ScrollbarRounding = 0;
-    ImGui::GetStyle().WindowRounding = 6;
-    ImGui::GetStyle().ChildRounding = 3;
-    ImGui::GetStyle().FrameRounding = 4;
-    ImGui::GetStyle().TabRounding = 2;
-
-}
-
-    void Menu::onPollEvent(SDL_Event * event,
-      const int result) {
-      if (result && ImGui_ImplSDL2_ProcessEvent(event) && Menu::open) {
-        event -> type = 0;
-      }
-    }
-
-    void Menu::onSwapWindow(SDL_Window * window) {
-      if (!initialised) {
-        gl3wInit();
-        IMGUI_CHECKVERSION();
-        ImGui::CreateContext();
-        ImGui::StyleColorsDark();
-        ImGui_ImplOpenGL3_Init("#version 100");
-        ImGui_ImplSDL2_InitForOpenGL(window, nullptr);
-        style();
-        ImGui::GetIO().Fonts -> AddFontFromMemoryCompressedTTF(Roboto_compressed_data, Roboto_compressed_size, 14.f);
-        initialised = true;
-      }
-
-      ImGui_ImplOpenGL3_NewFrame();
-      ImGui_ImplSDL2_NewFrame(window);
-
-      ImGuiIO & io = ImGui::GetIO();
-      int w, h;
-      SDL_GetWindowSize(window, & w, & h);
-      Globals::screenSizeX = w;
-      Globals::screenSizeY = h;
-      io.DisplaySize = ImVec2((float) w, (float) h);
-
-      ImGui::NewFrame();
-
-      Menu::drawOverlay(ImGui::GetBackgroundDrawList());
-      if (Menu::open) {
-        io.MouseDrawCursor = true; // TODO:find workaround at some point because ugly
-        Menu::drawMenu();
-        if (devWindow) {
-          drawDevWindow();
-        }
-        if (demoWindow) {
-          ImGui::ShowDemoWindow();
-        }
-      } else {
-        io.MouseDrawCursor =false;
-      }
-
-      if (ImGui::IsKeyPressed(SDL_SCANCODE_INSERT,false)) {
-        Config::reloadCfgList();
-        Menu::open = !Menu::open;
-      }
-
-      ImGui::Render();
-      ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-    }
+    colors[ImGuiCol_Header] = ImVec4(0.05f, 0.41f, 0.06f, 0.62f);
 
     void Menu::drawMenu() {
       ImGui::SetNextWindowSize(ImVec2 {
@@ -145,44 +81,17 @@ void style() {
       }
       ImGui::GetStyle().Colors[ImGuiCol_Button] = ImVec4(0.444f, 0.600f, 1.000f, 1.00f);
 
-      ImGui::GetStyle().Colors[ImGuiCol_Button] = (Menu::tabSelected == 4) ? ImVec4(0.00784313725490196, 0.28627450980392155, 0.9764705882352941, 1.0) : ImVec4(0.03f, 0.23f, 0.04f, 0.62f);
+      ImGui::GetStyle().Colors[ImGuiCol_Button] = (Menu::tabSelected == 4) ? ImVec4(0.05f, 0.41f, 0.06f, 0.62f) : ImVec4(0.03f, 0.23f, 0.04f, 0.62f);
       if (ImGui::Button("Rage", bWidth)) {
-        Menu::tabSelected = 4;
-      }
-      // ImGui::SameLine();
-      ImGui::PopStyleVar();
+"""
 
-      ImGui::EndChild();
+def find_green_values(code: str):
+    for line in code.split('\n'):
+        if 'ImVec4' in line:
+            values = line.split('ImVec4(')[1].split(')')[0].split(',')
+            if values:
+                r, g, b, a = map(float, [v.replace('f', '') for v in values])
+                if g > r and g > b:
+                    print(f"Green value found: {line}")
 
-      ImGui::SameLine();
-
-      ImGui::BeginChild("pane2", ImVec2(0, 0), true);
-      //ImGui::Separator();
-      //ImGui::Separator();
-
-      switch (tabSelected) {
-      case 0: {
-        Menu::drawLegitTab();
-        break;
-      }
-      case 1: {
-        Menu::drawVisualsTab();
-        break;
-      }
-      case 2: {
-        Menu::drawMiscTab();
-        break;
-      }
-      case 3: {
-        Menu::drawRageTab();
-        break;
-      }
-      case 4: {
-        Menu::drawRageTab();
-        break;
-      }
-      }
-      ImGui::EndChild();
-
-      ImGui::End();
-    }
+find_green_values(code)
