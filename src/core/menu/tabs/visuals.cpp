@@ -1,28 +1,19 @@
 #include "../../../includes.hpp"
 #include "../../../sdk/classes/vector.h"
 #include "../../features/features.hpp"
+#include "../../../sdk/classes/keyvalues.hpp"
 
-void drawAimlines(bool &enabled, ImVec4 color) {
-    // Get a pointer to the local player
-    Player *localPlayer = Globals::localPlayer;
-    if (localPlayer == nullptr) return;
+void drawAimlines(bool& enabled, ImVec4 color) {
+    auto localPlayer = Interfaces::entityList->GetClientEntity(Interfaces::engine->GetLocalPlayer());
 
-    // Get the player's eye position and view direction
-    //Vector eyePos = localPlayer->origin() + localPlayer->viewOffset;
-    Vector eyePos = localPlayer->viewOffset();
+    Vector eyePos = localPlayer.GetEyePos();
+    QAngle eyeAngles = localPlayer.GetEyeAngles();
     Vector lookDir;
-    angleVectors(localPlayer->eyeAngles(), lookDir);
-
-
-    // Calculate the end position of the aimline
+    angleVectors(eyeAngles, lookDir);
     Vector endPos = eyePos + lookDir * 8192.0f;
 
-    // Convert the end position to screen coordinates
-    Vector endPosScreen;
-    if (worldToScreen(endPos, endPosScreen)) {
-        // Draw the aimline
-        Surface->DrawLine(eyePos.x, eyePos.y, endPos.x, endPos.y, color);
-    }
+    Interfaces::trace.DrawSetColor(color);
+    Interfaces::trace.DrawLine(eyePos.x, eyePos.y, endPos.x, endPos.y);
 }
 
 
