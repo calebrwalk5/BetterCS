@@ -1,6 +1,34 @@
-#include "../menu.hpp"
+#include "../../../includes.hpp"
+#include "../../../sdk/classes/vector.h"
+#include "../../features/features.hpp"
+
+void drawAimlines(bool &enabled, ImVec4 color) {
+    // Get a pointer to the local player
+    Player *localPlayer = Globals::localPlayer;
+    if (localPlayer == nullptr) return;
+
+    // Get the player's eye position and view direction
+    //Vector eyePos = localPlayer->origin() + localPlayer->viewOffset;
+    Vector eyePos = localPlayer->viewOffset();
+    Vector lookDir;
+    angleVectors(localPlayer->eyeAngles(), lookDir);
+
+
+    // Calculate the end position of the aimline
+    Vector endPos = eyePos + lookDir * 8192.0f;
+
+    // Convert the end position to screen coordinates
+    Vector endPosScreen;
+    if (worldToScreen(endPos, endPosScreen)) {
+        // Draw the aimline
+        Surface->DrawLine(eyePos.x, eyePos.y, endPos.x, endPos.y, color);
+    }
+}
+
 
 const char* chamsMaterials[] = {"None", "Shaded", "Flat", "Screen Pulse", "Energy Ball", "Glow", "Plastic", "Darude", "Oil"};
+bool aimlinesEnabled = true;
+ImVec4 aimlinesColor = ImVec4(1.0f, 0.0f, 0.0f, 1.0f);
 
 void drawChamsWidget(const char* label,
                     int* material, ImColor* color,
@@ -57,7 +85,13 @@ void drawChamsWidget(const char* label,
 
 void Menu::drawVisualsTab() {
     if (ImGui::BeginTabBar("##visTabs")) {
+        if (ImGui::BeginTabItem("Aimlines")) {
+            ImGui::Checkbox("Enabled", &CONFIGBOOL("Visuals>Aimlines>Enabled"));
+            ImGui::EndTabItem();
+            }
+
         if (ImGui::BeginTabItem("Players")) {
+
             ImGui::BeginChild("Teammates", ImVec2(ImGui::GetWindowContentRegionWidth() * 0.325f, ImGui::GetWindowHeight() * 0.755f), true); {
                 ImGui::Text("Teammates");
                 ImGui::Separator();
@@ -97,13 +131,16 @@ void Menu::drawVisualsTab() {
                     false, nullptr, nullptr, nullptr,
                     &CONFIGBOOL("Visuals>Players>Teammates>Chams>Visible Wireframe"), &CONFIGBOOL("Visuals>Players>Teammates>Chams>Visible Overlay Wireframe"));
 
+
                 ImGui::EndChild();
             }
             ImGui::SameLine();
             ImGui::BeginChild("Enemies", ImVec2(ImGui::GetWindowContentRegionWidth() * 0.325f, ImGui::GetWindowHeight() * 0.755f), true); {
                 ImGui::Text("Enemies");
                 ImGui::Separator();
-
+                if (CONFIGBOOL("Visuals>Aimlines>Enabled")) {
+                    drawAimlines(CONFIGBOOL("Visuals>Aimlines>Enabled"), ImVec4(1.0f, 0.0f, 0.0f, 1.0f));
+                }
                 if (CONFIGBOOL("Visuals>Players>Enemies>Box")) {
                     ImGui::ColorEdit4("Box Color", (float*)&CONFIGCOL("Visuals>Players>Enemies>Box Color"), ImGuiColorEditFlags_NoInputs | ImGuiColorEditFlags_NoLabel | ImGuiColorEditFlags_PickerHueWheel);
                     ImGui::SameLine();

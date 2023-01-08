@@ -13,3 +13,4 @@ Updated colors<br>
 ### In development
 AI aimbot<br>
 Skin changer<br>
+Aim lines<br>

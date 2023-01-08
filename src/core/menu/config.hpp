@@ -227,6 +227,7 @@ namespace Config {
                 CONFIGITEM("Visuals>Players>Teammates>Only When Dead", false),
             // }
             // Chams {
+                CONFIGITEM("Visuals>Players>AimLines", false),
                 CONFIGITEM("Visuals>Players>Enemies>Chams>Visible Material", 0),
                 CONFIGITEM("Visuals>Players>Enemies>Chams>Visible Color", ImColor(197, 66, 245, 255)),
                 CONFIGITEM("Visuals>Players>Enemies>Chams>Visible Wireframe", false),

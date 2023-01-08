@@ -1,9 +1,16 @@
 #include "menu.hpp"
 
+#include "../../sdk/classes/vector.h"
+
+#include "../../sdk/sdk.hpp"
+
 #include "imgui/imgui.h"
+
+#include "../features/features.hpp"
 
 #include "roboto.hpp"
 
+#include "../../includes.hpp"
 
 void style() {
     ImVec4* colors = ImGui::GetStyle().Colors;
@@ -62,7 +69,6 @@ void style() {
     ImGui::GetStyle().TabRounding = 2;
 
 }
-
     void Menu::onPollEvent(SDL_Event * event,
       const int result) {
       if (result && ImGui_ImplSDL2_ProcessEvent(event) && Menu::open) {
@@ -154,6 +160,8 @@ void style() {
       if (ImGui::Button("Skin Changer", bWidth)) {
         Menu::tabSelected = 5;
       }
+
+
       // ImGui::SameLine();
       ImGui::PopStyleVar();
 

@@ -25,7 +25,8 @@ namespace Menu {
     void drawOverlay(ImDrawList* drawList);
     void onPollEvent(SDL_Event* event, const int result);
     void onSwapWindow(SDL_Window* window);
-    
+    void drawAimlines(bool& enabled, ImVec4 color);
+
     namespace CustomWidgets {
         void drawKeyBinder(const char* label, int* key, bool* toggled);
         bool isKeyDown(int key);
