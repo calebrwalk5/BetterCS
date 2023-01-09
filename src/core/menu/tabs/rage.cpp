@@ -53,7 +53,7 @@ void Menu::drawRageTab() {
 
             ImGui::Text("Yaw Offset");
             ImGui::SetNextItemWidth(ImGui::GetWindowContentRegionWidth());
-            ImGui::SliderInt("##Offset", &CONFIGINT("Rage>AntiAim>Offset"), 0, 500);
+            ImGui::SliderInt("##Offset", &CONFIGINT("Rage>AntiAim>Offset"), 0, 750);
 
             ImGui::Text("FakeLag");
             ImGui::SetNextItemWidth(ImGui::GetWindowContentRegionWidth());
@@ -94,7 +94,7 @@ void Menu::drawRageTab() {
         if (CONFIGINT("Rage>AntiAim>Type") == 3) { // Fake Jitter
             ImGui::Text("Jitter Amount");
             ImGui::SetNextItemWidth(ImGui::GetWindowContentRegionWidth());
-            ImGui::SliderInt("##Jitter Amount", &CONFIGINT("Rage>AntiAim>Fake Jitter>Jitter Amount"), 0, 60);
+            ImGui::SliderInt("##Jitter Amount", &CONFIGINT("Rage>AntiAim>Fake Jitter>Jitter Amount"), 0, 100);
 
             ImGui::Text("Jitter Delay");
             ImGui::SetNextItemWidth(ImGui::GetWindowContentRegionWidth());
@@ -115,7 +115,7 @@ void Menu::drawRageTab() {
         if (CONFIGINT("Rage>AntiAim>Type") == 4) { // Real Jitter
             ImGui::Text("Jitter Amount");
             ImGui::SetNextItemWidth(ImGui::GetWindowContentRegionWidth());
-            ImGui::SliderInt("##Jitter Amount", &CONFIGINT("Rage>AntiAim>Real Jitter>Jitter Amount"), 0, 60);
+            ImGui::SliderInt("##Jitter Amount", &CONFIGINT("Rage>AntiAim>Real Jitter>Jitter Amount"), 0, 200);
 
             ImGui::Text("Jitter Delay");
             ImGui::SetNextItemWidth(ImGui::GetWindowContentRegionWidth());
