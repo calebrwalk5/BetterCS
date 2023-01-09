@@ -41,16 +41,22 @@ void createMaterials() {
             "$alpha" "0.8"
         })#");
 
-        glitterMaterial = createMaterial("pearlescent", "VertexLitGeneric",
+        glitterMaterial = createMaterial("glow", "VertexLitGeneric",
         R"#("VertexLitGeneric"
         {
+            "$additive" "1"
+            "$envmap" "models/effects/cube_white"
+            "$envmaptint" "[1 1 1]"
+            "$envmapfresnel" "1"
+            "$envmapfresnelminmaxexp" "[0 1 2]"
+            "$alpha" ".2"
             "$basetexture" "vgui/white_additive"
             "$nocull" "1"
             "$nofog" "1"
             "$model" "1"
             "$nocull" "0"
             "$phong" "15"
-            "$phongboost" "2"
+            "$phongboost" "5"
             "$phongboost" "0"
             "$basemapalphaphongmask" "1"
             "$pearlescent" "10"
