@@ -57,7 +57,6 @@ void createMaterials() {
             "$nocull" "0"
             "$phong" "20"
             "$phongboost" "10"
-            "$phongboost" "0"
             "$basemapalphaphongmask" "1"
             "$pearlescent" "15"
         })#");
