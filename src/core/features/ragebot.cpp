@@ -42,7 +42,7 @@ void Features::RageBot::createMove(CUserCmd* cmd) {
                         if (p->getAnythingBones(boneMatrix)) {
                             Vector localPlayerEyePos = Globals::localPlayer->eyePos();
                             Vector targetBonePos;
-                            if (targetHitbox == HEAD || targetHitbox == BOTH) {
+                            if (targetHitbox == HEAD) {
                                 targetBonePos = p->getBonePos(8); // Head
                             }
                             else if (targetHitbox == CHEST) {
