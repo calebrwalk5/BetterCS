@@ -34,7 +34,9 @@ void Features::AntiAim::createMove(CUserCmd* cmd) {
 
                                 int real = 0;
                                 int fake = 0;
-
+                                int randomSpinAmount = ((rand() % (CONFIGINT("Rage>AntiAim>Random Spin>Max Spin") - CONFIGINT("Rage>AntiAim>Random Spin>Min Spin"))) + CONFIGINT("Rage>AntiAim>Random Spin>Min Spin"));
+                                real = cmd->viewangles.y + CONFIGINT("Rage>AntiAim>Offset") + randomSpinAmount;
+                                fake = CONFIGINT("Rage>AntiAim>Random Spin>Desync");
                                 switch (CONFIGINT("Rage>AntiAim>Type")) {
                                     case 1: { // Static 
                                         real = cmd->viewangles.y + CONFIGINT("Rage>AntiAim>Offset");
