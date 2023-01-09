@@ -55,11 +55,11 @@ void createMaterials() {
             "$nofog" "1"
             "$model" "1"
             "$nocull" "0"
-            "$phong" "15"
-            "$phongboost" "5"
+            "$phong" "20"
+            "$phongboost" "10"
             "$phongboost" "0"
             "$basemapalphaphongmask" "1"
-            "$pearlescent" "10"
+            "$pearlescent" "15"
         })#");
 
         init = true;
