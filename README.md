@@ -10,7 +10,7 @@ bash toolbox.sh -b -l
 ### Changes made
 Ragebot added<br>
 Updated colors<br>
+Third person<br>
 ### In development
-AI aimbot<br>
 Skin changer<br>
 Aim lines<br>
