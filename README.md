@@ -5,7 +5,7 @@ Open Source CS:GO Cheat<br>
 ```sh
 git clone https://github.com/calebrwalk5/BetterCS
 cd BetterCS
-bash toolbox.sh -b -l
+bash toolbox.sh -p -b -l
 ```
 ### Changes made
 Ragebot added<br>

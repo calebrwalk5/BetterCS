@@ -218,6 +218,7 @@ mv libN3WTuX.so "$(cat build_id)"
 
 function pull {
     echo "Feature still in development..."
+    git pull
 }
 
 while [[ $# -gt 0 ]]
