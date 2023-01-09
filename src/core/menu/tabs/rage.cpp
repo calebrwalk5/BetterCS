@@ -2,13 +2,6 @@
 
 const char* antiAimTypes[] = {"None", "Static", "Jitter", "Fake Jitter", "Real Jitter", "Spin"};
 
-enum Hitbox {
-    HEAD,
-    CHEST,
-    BOTH
-};
-
-
 void Menu::drawRageTab() {
     ImGui::Checkbox("Enabled", &CONFIGBOOL("Rage>Enabled"));
     ImGui::SameLine();
@@ -53,7 +46,7 @@ void Menu::drawRageTab() {
 
             ImGui::Text("Yaw Offset");
             ImGui::SetNextItemWidth(ImGui::GetWindowContentRegionWidth());
-            ImGui::SliderInt("##Offset", &CONFIGINT("Rage>AntiAim>Offset"), 0, 359);
+            ImGui::SliderInt("##Offset", &CONFIGINT("Rage>AntiAim>Offset"), 0, 360);
 
             ImGui::Text("FakeLag");
             ImGui::SetNextItemWidth(ImGui::GetWindowContentRegionWidth());
@@ -73,7 +66,7 @@ void Menu::drawRageTab() {
 
             ImGui::Text("Jitter Amount");
             ImGui::SetNextItemWidth(ImGui::GetWindowContentRegionWidth());
-            ImGui::SliderInt("##Jitter Amount", &CONFIGINT("Rage>AntiAim>Jitter>Jitter Amount"), 0, 250);
+            ImGui::SliderInt("##Jitter Amount", &CONFIGINT("Rage>AntiAim>Jitter>Jitter Amount"), 0, 180);
 
             ImGui::Text("Jitter Delay");
             ImGui::SetNextItemWidth(ImGui::GetWindowContentRegionWidth());
@@ -94,7 +87,7 @@ void Menu::drawRageTab() {
         if (CONFIGINT("Rage>AntiAim>Type") == 3) { // Fake Jitter
             ImGui::Text("Jitter Amount");
             ImGui::SetNextItemWidth(ImGui::GetWindowContentRegionWidth());
-            ImGui::SliderInt("##Jitter Amount", &CONFIGINT("Rage>AntiAim>Fake Jitter>Jitter Amount"), 0, 100);
+            ImGui::SliderInt("##Jitter Amount", &CONFIGINT("Rage>AntiAim>Fake Jitter>Jitter Amount"), 0, 60);
 
             ImGui::Text("Jitter Delay");
             ImGui::SetNextItemWidth(ImGui::GetWindowContentRegionWidth());
