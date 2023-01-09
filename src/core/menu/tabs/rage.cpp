@@ -1,6 +1,6 @@
 #include "../menu.hpp"
 
-const char* antiAimTypes[] = {"None", "Static", "Jitter", "Fake Jitter", "Real Jitter", "Spin"};
+const char* antiAimTypes[] = {"None", "Static", "Jitter", "Fake Jitter", "Real Jitter"};
 
 void Menu::drawRageTab() {
     ImGui::Checkbox("Enabled", &CONFIGBOOL("Rage>Enabled"));
@@ -126,11 +126,11 @@ void Menu::drawRageTab() {
             }
         }
 
-        if (CONFIGINT("Rage>AntiAim>Type") == 5) { // Spin
+        /*if (CONFIGINT("Rage>AntiAim>Type") == 5) { // Spin
             ImGui::Text("Desync");
             ImGui::SetNextItemWidth(ImGui::GetWindowContentRegionWidth());
             ImGui::SliderInt("##Desync", &CONFIGINT("Rage>AntiAim>Spin>Desync"), -60, 60);
-        }
+        }*/
         ImGui::Checkbox("Slow Walk",&CONFIGBOOL("Rage>AntiAim>Slow Walk"));
         ImGui::SliderInt("Slow Walk Speed (%)", &CONFIGINT("Rage>AntiAim>Slow Walk Speed"), 0, 255);
         ImGui::EndChild();

@@ -59,11 +59,11 @@ void Features::AntiAim::createMove(CUserCmd* cmd) {
                                         fake = CONFIGINT("Rage>AntiAim>Static>Desync") - jitterAmt;
                                         break;
                                     }
-                                    case 5: { // Spin 
+                                    /*case 5: { // Spin 
                                         real = cmd->viewangles.y + (cmd->tick_count * CONFIGINT("Rage>AntiAim>Offset"));
                                         fake = CONFIGINT("Rage>AntiAim>Spin>Desync");
                                         break;
-                                    }
+                                    }*/
                                 }
 
                                 //TODO Check for net channel group 9 so we can desync and yell at nn's at the same time

@@ -52,7 +52,7 @@ filename=$(cat build_id)
 
 # Credit: Aixxe @ aixxe.net
 if grep -q "$filename" /proc/$csgo_pid/maps; then
-    echo_orange "N3WTuX is already injected, aborting..."
+    echo_orange "BetterCS is already injected, aborting..."
     exit
 fi
 echo "Injecting Build ID: $filename"
