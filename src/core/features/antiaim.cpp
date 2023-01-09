@@ -31,12 +31,12 @@ void Features::AntiAim::createMove(CUserCmd* cmd) {
                                 // TODO: for some reason it refuses to desync when looking forward???!?!?
                                 int real = 0;
                                 int fake = 0;
-                                if (CONFIGINT("Rage>AntiAim>Type") == 5) { // Random Spin
+                                /*if (CONFIGINT("Rage>AntiAim>Type") == 5) { // Random Spin
                                 cmd->viewangles.x = CONFIGINT("Rage>AntiAim>Pitch");
                                     int randomSpinAmount = ((rand() % (CONFIGINT("Rage>AntiAim>Random Spin>Max Spin") - CONFIGINT("Rage>AntiAim>Random Spin>Min Spin"))) + CONFIGINT("Rage>AntiAim>Random Spin>Min Spin"));
                                     real = cmd->viewangles.y + CONFIGINT("Rage>AntiAim>Offset") + randomSpinAmount;
                                     fake = CONFIGINT("Rage>AntiAim>Random Spin>Desync");
-                                }
+                                }*/
                                 switch (CONFIGINT("Rage>AntiAim>Type")) {
                                     case 1: { // Static 
                                         real = cmd->viewangles.y + CONFIGINT("Rage>AntiAim>Offset");
@@ -61,11 +61,12 @@ void Features::AntiAim::createMove(CUserCmd* cmd) {
                                         fake = CONFIGINT("Rage>AntiAim>Static>Desync") - jitterAmt;
                                         break;
                                     }
-                                    /*case 5: { // Spin 
-                                        real = cmd->viewangles.y + (cmd->tick_count * CONFIGINT("Rage>AntiAim>Offset"));
+                                    case 5: { // Spin 
+                                        int randomSpinAmount = ((rand() % (CONFIGINT("Rage>AntiAim>Spin>Max Spin") - CONFIGINT("Rage>AntiAim>Spin>Min Spin"))) + CONFIGINT("Rage>AntiAim>Spin>Min Spin"));
+                                        real = cmd->viewangles.y + CONFIGINT("Rage>AntiAim>Offset") + randomSpinAmount;
                                         fake = CONFIGINT("Rage>AntiAim>Spin>Desync");
                                         break;
-                                    }*/
+                                    }
                                 }
 
                                 //TODO Check for net channel group 9 so we can desync and yell at nn's at the same time
