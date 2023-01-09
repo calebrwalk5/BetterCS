@@ -1,4 +1,4 @@
-/*#include "features.h"
+#include "features.h"
 #include "../../includes.hpp"
 
 void Features::SlowWalk::createMove(CUserCmd *cmd) {
@@ -9,4 +9,3 @@ void Features::SlowWalk::createMove(CUserCmd *cmd) {
         cmd->sidemove = 0;
     }
 }
-*/

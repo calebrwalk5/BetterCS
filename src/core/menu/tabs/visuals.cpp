@@ -4,7 +4,7 @@
 #include "../../../sdk/classes/keyvalues.hpp"
 #include "../menu.hpp"
 
-const char* chamsMaterials[] = {"None", "Shaded", "Flat", "Screen Pulse", "Energy Ball", "Glow", "Plastic", "Darude", "Oil"};
+const char* chamsMaterials[] = {"None", "Shaded", "Flat", "Screen Pulse", "Energy Ball", "Glow", "Plastic", "Darude", "Glitter"};
 
 void drawChamsWidget(const char* label,
                     int* material, ImColor* color,

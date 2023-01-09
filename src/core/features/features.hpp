@@ -122,9 +122,9 @@ namespace Features {
         inline float drawHitmarkerTill;
         void draw();
     }
-    /*mespace SlowWalk {
+    namespace SlowWalk {
         void createMove(CUserCmd* cmd);
-    }*/
+    }
     namespace NoFlash {
         void frameStageNotify(FrameStage frame);
     }

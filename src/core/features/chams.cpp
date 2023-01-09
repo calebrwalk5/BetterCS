@@ -10,7 +10,7 @@ IMaterial* energyBallMaterial;
 IMaterial* glowMaterial;
 IMaterial* plasticMaterial;
 IMaterial* darudeMaterial;
-IMaterial* oilMaterial;
+IMaterial* glitterMaterial;
 
 IMaterial* createMaterial(const char* materialName, const char* materialType, const char* material) {
 	KeyValues* keyValues = new KeyValues(materialName);
@@ -41,7 +41,7 @@ void createMaterials() {
             "$alpha" "0.8"
         })#");
 
-        oilMaterial = createMaterial("pearlescent", "VertexLitGeneric",
+        glitterMaterial = createMaterial("pearlescent", "VertexLitGeneric",
         R"#("VertexLitGeneric"
         {
             "$basetexture" "vgui/white_additive"
@@ -49,10 +49,11 @@ void createMaterials() {
             "$nofog" "1"
             "$model" "1"
             "$nocull" "0"
-            "$phong" "1"
+            "$phong" "5"
+            "$phongboost" "2"
             "$phongboost" "0"
             "$basemapalphaphongmask" "1"
-            "$pearlescent" "6"
+            "$pearlescent" "10"
         })#");
 
         init = true;
@@ -70,7 +71,7 @@ void cham(void* thisptr, void* ctx, const DrawModelState_t &state, const ModelRe
         case 5: material = glowMaterial; break;
         case 6: material = plasticMaterial; break;
         case 7: material = darudeMaterial; break;
-        case 8: material = oilMaterial; break;
+        case 8: material = glitterMaterial; break;
     }
     material->SetMaterialVarFlag(MATERIAL_VAR_IGNOREZ, ignoreZ);
     material->SetMaterialVarFlag(MATERIAL_VAR_WIREFRAME, wireframe);
