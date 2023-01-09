@@ -53,7 +53,7 @@ void Menu::drawRageTab() {
 
             ImGui::Text("Yaw Offset");
             ImGui::SetNextItemWidth(ImGui::GetWindowContentRegionWidth());
-            ImGui::SliderInt("##Offset", &CONFIGINT("Rage>AntiAim>Offset"), 0, 750);
+            ImGui::SliderInt("##Offset", &CONFIGINT("Rage>AntiAim>Offset"), 0, 300);
 
             ImGui::Text("FakeLag");
             ImGui::SetNextItemWidth(ImGui::GetWindowContentRegionWidth());
