@@ -49,7 +49,7 @@ void createMaterials() {
             "$nofog" "1"
             "$model" "1"
             "$nocull" "0"
-            "$phong" "5"
+            "$phong" "15"
             "$phongboost" "2"
             "$phongboost" "0"
             "$basemapalphaphongmask" "1"
