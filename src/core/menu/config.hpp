@@ -146,7 +146,7 @@ namespace Config {
         // }
         // RageBot {
             // Default {
-                CONFIGITEM("Rage>Enabled", true),
+                CONFIGITEM("Rage>Enabled", false),
                 CONFIGITEM("Rage>RageBot>Default>Resolver", false),
                 CONFIGITEM("Rage>RageBot>Default>FOV", 180),
                 CONFIGITEM("Rage>RageBot>Default>ForceBaim", false),
@@ -186,7 +186,7 @@ namespace Config {
                 // }
 
                 // Spin {
-                    CONFIGITEM("Rage>AntiAim>Spin>Desync", 0),
+                    CONFIGITEM("Rage>AntiAim>Spin>Desync", 1),
                 // }
                 CONFIGITEM("Rage>AntiAim>Slow Walk", false),
                 CONFIGITEM("Rage>AntiAim>Slow Walk Speed", 55),

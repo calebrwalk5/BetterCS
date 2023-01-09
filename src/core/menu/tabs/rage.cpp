@@ -1,6 +1,13 @@
 #include "../menu.hpp"
 
-const char* antiAimTypes[] = {"None", "Static", "Jitter", "Fake Jitter", "Real Jitter", "SpingBot (p100)"};
+const char* antiAimTypes[] = {"None", "Static", "Jitter", "Fake Jitter", "Real Jitter", "Spin"};
+
+enum Hitbox {
+    HEAD,
+    CHEST,
+    BOTH
+};
+
 
 void Menu::drawRageTab() {
     ImGui::Checkbox("Enabled", &CONFIGBOOL("Rage>Enabled"));
@@ -46,7 +53,7 @@ void Menu::drawRageTab() {
 
             ImGui::Text("Yaw Offset");
             ImGui::SetNextItemWidth(ImGui::GetWindowContentRegionWidth());
-            ImGui::SliderInt("##Offset", &CONFIGINT("Rage>AntiAim>Offset"), 0, 360);
+            ImGui::SliderInt("##Offset", &CONFIGINT("Rage>AntiAim>Offset"), 0, 500);
 
             ImGui::Text("FakeLag");
             ImGui::SetNextItemWidth(ImGui::GetWindowContentRegionWidth());
@@ -126,7 +133,7 @@ void Menu::drawRageTab() {
             }
         }
 
-        if (CONFIGINT("Rage>AntiAim>Type") == 5) { // Sping
+        if (CONFIGINT("Rage>AntiAim>Type") == 5) { // Spin
             ImGui::Text("Desync");
             ImGui::SetNextItemWidth(ImGui::GetWindowContentRegionWidth());
             ImGui::SliderInt("##Desync", &CONFIGINT("Rage>AntiAim>Spin>Desync"), -60, 60);

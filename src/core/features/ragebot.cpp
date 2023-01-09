@@ -1,6 +1,11 @@
 #include "../../includes.hpp"
 #include "features.hpp"
 
+enum Hitbox {
+    HEAD,
+    CHEST
+};
+
 void Features::RageBot::createMove(CUserCmd* cmd) {
     if (Interfaces::engine->IsInGame() && Globals::localPlayer && Globals::localPlayer->health() > 0 && cmd->buttons & (1 << 0)) {
         Weapon *weapon = (Weapon *) Interfaces::entityList->GetClientEntity((uintptr_t)Globals::localPlayer->activeWeapon() & 0xFFF); // GetClientEntityFromHandle is being gay
@@ -9,7 +14,25 @@ void Features::RageBot::createMove(CUserCmd* cmd) {
 
             float closestDelta = FLT_MAX;
             QAngle angleToClosestPlayer = {0, 0, 0};
-
+            int hitboxes = CONFIGINT("Rage>RageBot>Default>Hitboxes");
+            Hitbox targetHitbox;
+                switch (hitboxes) {
+                    case 0:
+                        targetHitbox = HEAD;
+                        break;
+                    case 1:
+                        targetHitbox = CHEST;
+                        break;
+                }
+                hitboxes = CONFIGINT("Rage>RageBot>Pistol>Hitboxes");
+                switch (hitboxes) {
+                    case 0:
+                        targetHitbox = HEAD;
+                        break;
+                    case 1:
+                        targetHitbox = CHEST;
+                        break;
+                }
             // Enumerate over players and get angle to the closest player to crosshair
             for (int i = 1; i < Interfaces::globals->maxClients; i++) {
                 Player* p = (Player*)Interfaces::entityList->GetClientEntity(i);
@@ -18,9 +41,14 @@ void Features::RageBot::createMove(CUserCmd* cmd) {
                         matrix3x4_t boneMatrix[128];
                         if (p->getAnythingBones(boneMatrix)) {
                             Vector localPlayerEyePos = Globals::localPlayer->eyePos();
-                            Vector targetBonePos = p->getBonePos(8);
-                            
-                            //TODO check which bone would be exposed sooner with engine prediction and which would do more damage.
+                            Vector targetBonePos;
+                            if (targetHitbox == HEAD || targetHitbox == BOTH) {
+                                targetBonePos = p->getBonePos(8); // Head
+                            }
+                            else if (targetHitbox == CHEST) {
+                                targetBonePos = p->getBonePos(4); // Chest
+                            }
+
                             if(CONFIGBOOL("Rage>RageBot>Default>ForceBaim")) {
                                 if(p->health() <= CONFIGINT("Rage>RageBot>Default>ForceBaimValue")) {
                                     targetBonePos = p->getBonePos(0); // Pelvis
@@ -29,7 +57,8 @@ void Features::RageBot::createMove(CUserCmd* cmd) {
                                 }
                             }
 
-                            QAngle angleToCurrentPlayer = calcAngle(localPlayerEyePos, targetBonePos) - cmd->viewangles - Globals::localPlayer->aimPunch()*2;
+                            QAngle angleToCurrentPlayer = calcAngle(localPlayerEyePos, targetBonePos) - cmd->viewangles - Globals::localPlayer->aimPunch()*2
+;
                             normalizeAngles(angleToCurrentPlayer);
 
                             if (angleToCurrentPlayer.Length() < closestDelta) {

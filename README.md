@@ -11,6 +11,8 @@ bash toolbox.sh -p -b -l
 Ragebot added<br>
 Updated colors<br>
 Third person<br>
+Better triggerbot<br>
+Better antiaim<br>
 ### In development
 Skin changer<br>
 Aim lines<br>
