@@ -229,7 +229,7 @@ namespace Config {
             // Chams {
                 CONFIGITEM("Visuals>Players>AimLines", false),
                 CONFIGITEM("Visuals>Players>Enemies>Chams>Visible Material", 0),
-                CONFIGITEM("Visuals>Players>Enemies>Chams>Visible Color", ImColor(255, 255, 255, 255)),
+                CONFIGITEM("Visuals>Players>Enemies>Chams>Visible Color", ImColor(255, 0, 255, 255)),
                 CONFIGITEM("Visuals>Players>Enemies>Chams>Visible Wireframe", false),
                 CONFIGITEM("Visuals>Players>Enemies>Chams>Visible Overlay Material", 0),
                 CONFIGITEM("Visuals>Players>Enemies>Chams>Visible Overlay Color", ImColor(197, 66, 245, 255)),
