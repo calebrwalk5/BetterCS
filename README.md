@@ -7,6 +7,10 @@ git clone https://github.com/calebrwalk5/BetterCS
 cd BetterCS
 bash toolbox.sh -p -b -l
 ```
+### How to uninject
+```sh
+bash uninject.sh
+```
 ### Changes made
 Ragebot added<br>
 Updated colors<br>
