@@ -221,7 +221,7 @@ void Menu::drawVisualsTab() {
                 ImGui::Text("Viewmodel FOV");
                 ImGui::SetNextItemWidth(ImGui::GetWindowContentRegionWidth());
                 ImGui::SliderInt("##Viewmodel FOV", &CONFIGINT("Visuals>World>World>Viewmodel FOV"), 0, 130);
-                ImGui::Checkbox("Third Person", &CONFIGBOOL("Visuals>World>World>Third Person"));
+                ImGui::Checkbox("Third Person (DEBUG USE ONLY)", &CONFIGBOOL("Visuals>World>World>Third Person"));
                 ImGui::Checkbox("No Flash", &CONFIGBOOL("Visuals>World>World>No Flash"));
                 ImGui::Text("Flash Amount");
                 ImGui::SetNextItemWidth(ImGui::GetWindowContentRegionWidth());
