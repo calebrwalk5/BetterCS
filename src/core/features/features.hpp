@@ -9,8 +9,8 @@ namespace Features {
         void end();
         void restoreEntityToPredictedFrame(int predicted_frame);
     }
-    namespace AimLines {
-        void drawAimLines();
+    namespace BarrelLines {
+        void drawBarrelLines();
     }
     namespace ESP {
         void draw();

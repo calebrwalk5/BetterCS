@@ -129,30 +129,6 @@ N3WTuX/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3WTuX.dir/build.make CMakeFiles/N3WTuX.dir/build
 .PHONY : N3WTuX/fast
 
-src/core/features/aimlines.o: src/core/features/aimlines.cpp.o
-.PHONY : src/core/features/aimlines.o
-
-# target to build an object file
-src/core/features/aimlines.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3WTuX.dir/build.make CMakeFiles/N3WTuX.dir/src/core/features/aimlines.cpp.o
-.PHONY : src/core/features/aimlines.cpp.o
-
-src/core/features/aimlines.i: src/core/features/aimlines.cpp.i
-.PHONY : src/core/features/aimlines.i
-
-# target to preprocess a source file
-src/core/features/aimlines.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3WTuX.dir/build.make CMakeFiles/N3WTuX.dir/src/core/features/aimlines.cpp.i
-.PHONY : src/core/features/aimlines.cpp.i
-
-src/core/features/aimlines.s: src/core/features/aimlines.cpp.s
-.PHONY : src/core/features/aimlines.s
-
-# target to generate assembly for a file
-src/core/features/aimlines.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3WTuX.dir/build.make CMakeFiles/N3WTuX.dir/src/core/features/aimlines.cpp.s
-.PHONY : src/core/features/aimlines.cpp.s
-
 src/core/features/antiaim.o: src/core/features/antiaim.cpp.o
 .PHONY : src/core/features/antiaim.o
 
@@ -248,6 +224,30 @@ src/core/features/backtrack.s: src/core/features/backtrack.cpp.s
 src/core/features/backtrack.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3WTuX.dir/build.make CMakeFiles/N3WTuX.dir/src/core/features/backtrack.cpp.s
 .PHONY : src/core/features/backtrack.cpp.s
+
+src/core/features/barrelLines.o: src/core/features/barrelLines.cpp.o
+.PHONY : src/core/features/barrelLines.o
+
+# target to build an object file
+src/core/features/barrelLines.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3WTuX.dir/build.make CMakeFiles/N3WTuX.dir/src/core/features/barrelLines.cpp.o
+.PHONY : src/core/features/barrelLines.cpp.o
+
+src/core/features/barrelLines.i: src/core/features/barrelLines.cpp.i
+.PHONY : src/core/features/barrelLines.i
+
+# target to preprocess a source file
+src/core/features/barrelLines.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3WTuX.dir/build.make CMakeFiles/N3WTuX.dir/src/core/features/barrelLines.cpp.i
+.PHONY : src/core/features/barrelLines.cpp.i
+
+src/core/features/barrelLines.s: src/core/features/barrelLines.cpp.s
+.PHONY : src/core/features/barrelLines.s
+
+# target to generate assembly for a file
+src/core/features/barrelLines.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3WTuX.dir/build.make CMakeFiles/N3WTuX.dir/src/core/features/barrelLines.cpp.s
+.PHONY : src/core/features/barrelLines.cpp.s
 
 src/core/features/blockbot.o: src/core/features/blockbot.cpp.o
 .PHONY : src/core/features/blockbot.o
@@ -1866,9 +1866,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... N3WTuX"
-	@echo "... src/core/features/aimlines.o"
-	@echo "... src/core/features/aimlines.i"
-	@echo "... src/core/features/aimlines.s"
 	@echo "... src/core/features/antiaim.o"
 	@echo "... src/core/features/antiaim.i"
 	@echo "... src/core/features/antiaim.s"
@@ -1881,6 +1878,9 @@ help:
 	@echo "... src/core/features/backtrack.o"
 	@echo "... src/core/features/backtrack.i"
 	@echo "... src/core/features/backtrack.s"
+	@echo "... src/core/features/barrelLines.o"
+	@echo "... src/core/features/barrelLines.i"
+	@echo "... src/core/features/barrelLines.s"
 	@echo "... src/core/features/blockbot.o"
 	@echo "... src/core/features/blockbot.i"
 	@echo "... src/core/features/blockbot.s"
