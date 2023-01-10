@@ -22,6 +22,7 @@ namespace Menu {
     void drawMiscTab();
     void drawDevWindow();
     void drawSkinChangerTab();
+    void drawMovementTab();
     void drawOverlay(ImDrawList* drawList);
     void onPollEvent(SDL_Event* event, const int result);
     void onSwapWindow(SDL_Window* window);

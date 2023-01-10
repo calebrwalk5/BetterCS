@@ -1569,6 +1569,30 @@ src/core/menu/tabs/misc.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3WTuX.dir/build.make CMakeFiles/N3WTuX.dir/src/core/menu/tabs/misc.cpp.s
 .PHONY : src/core/menu/tabs/misc.cpp.s
 
+src/core/menu/tabs/movement.o: src/core/menu/tabs/movement.cpp.o
+.PHONY : src/core/menu/tabs/movement.o
+
+# target to build an object file
+src/core/menu/tabs/movement.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3WTuX.dir/build.make CMakeFiles/N3WTuX.dir/src/core/menu/tabs/movement.cpp.o
+.PHONY : src/core/menu/tabs/movement.cpp.o
+
+src/core/menu/tabs/movement.i: src/core/menu/tabs/movement.cpp.i
+.PHONY : src/core/menu/tabs/movement.i
+
+# target to preprocess a source file
+src/core/menu/tabs/movement.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3WTuX.dir/build.make CMakeFiles/N3WTuX.dir/src/core/menu/tabs/movement.cpp.i
+.PHONY : src/core/menu/tabs/movement.cpp.i
+
+src/core/menu/tabs/movement.s: src/core/menu/tabs/movement.cpp.s
+.PHONY : src/core/menu/tabs/movement.s
+
+# target to generate assembly for a file
+src/core/menu/tabs/movement.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3WTuX.dir/build.make CMakeFiles/N3WTuX.dir/src/core/menu/tabs/movement.cpp.s
+.PHONY : src/core/menu/tabs/movement.cpp.s
+
 src/core/menu/tabs/rage.o: src/core/menu/tabs/rage.cpp.o
 .PHONY : src/core/menu/tabs/rage.o
 
@@ -1998,6 +2022,9 @@ help:
 	@echo "... src/core/menu/tabs/misc.o"
 	@echo "... src/core/menu/tabs/misc.i"
 	@echo "... src/core/menu/tabs/misc.s"
+	@echo "... src/core/menu/tabs/movement.o"
+	@echo "... src/core/menu/tabs/movement.i"
+	@echo "... src/core/menu/tabs/movement.s"
 	@echo "... src/core/menu/tabs/rage.o"
 	@echo "... src/core/menu/tabs/rage.i"
 	@echo "... src/core/menu/tabs/rage.s"
