@@ -34,8 +34,8 @@ bool Hooks::init() {
     Log::log(LOG, " Hooking IsHLTV...");
     IsHLTV::original = (IsHLTV::func)VMT::hook(Interfaces::engine, (void*)IsHLTV::hook, 93);
 
-   // Log::log(LOG, " Hooking ClientCmd...");
-   // ClientCmd::original = (ClientCmd::func)VMT::hook(Interfaces::engine, (void*)ClientCmd::hook, 7);
+    Log::log(LOG, " Hooking ClientCmd...");
+    ClientCmd::original = (ClientCmd::func)VMT::hook(Interfaces::engine, (void*)ClientCmd::hook, 7);
 
     Log::log(LOG, " Hooking OverrideView...");
     OverrideView::original = (OverrideView::func)VMT::hook(Interfaces::clientMode, (void*)OverrideView::hook, 19);
