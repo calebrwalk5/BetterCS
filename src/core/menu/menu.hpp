@@ -21,7 +21,7 @@ namespace Menu {
     void drawVisualsTab();
     void drawMiscTab();
     void drawDevWindow();
-    void drawAntiAimTab();
+    //void drawAntiAimTab();
     void drawMovementTab();
     void drawOverlay(ImDrawList* drawList);
     void onPollEvent(SDL_Event* event, const int result);
