@@ -232,7 +232,7 @@ namespace Config {
                 CONFIGITEM("Visuals>Players>Enemies>Chams>Visible Color", ImColor(255, 0, 255, 255)),
                 CONFIGITEM("Visuals>Players>Enemies>Chams>Visible Wireframe", false),
                 CONFIGITEM("Visuals>Players>Enemies>Chams>Visible Overlay Material", 0),
-                CONFIGITEM("Visuals>Players>Enemies>Chams>Visible Overlay Color", ImColor(197, 66, 245, 255)),
+                CONFIGITEM("Visuals>Players>Enemies>Chams>Visible Overlay Color", ImColor(255, 0, 255, 255)),
                 CONFIGITEM("Visuals>Players>Enemies>Chams>Visible Overlay Wireframe", false),
                 CONFIGITEM("Visuals>Players>Enemies>Chams>Occluded Material", 0),
                 CONFIGITEM("Visuals>Players>Enemies>Chams>Occluded Color", ImColor(197, 66, 245, 255)),
@@ -282,7 +282,7 @@ namespace Config {
                 CONFIGITEM("Visuals>World>World>SkyBox Color Modulation", ImColor(255, 255, 255, 255)),
                 CONFIGITEM("Visuals>World>World>Nightmode", 0),
                 CONFIGITEM("Visuals>World>World>Skybox", 0),
-                CONFIGITEM("Visuals>World>World>FOV", 90),
+                CONFIGITEM("Visuals>World>World>FOV", 95),
                 CONFIGITEM("Visuals>World>World>Viewmodel FOV", 0),
                 CONFIGITEM("Visuals>World>World>Third Person", false),
                 CONFIGITEM("Visuals>World>World>No Flash", false),
@@ -326,7 +326,7 @@ namespace Config {
             // }
         // }
         // Misc {
-            CONFIGITEM("Misc>Misc>Movement>Auto Hop", false),
+            CONFIGITEM("Misc>Misc>Movement>Auto Hop", true),
             CONFIGITEM("Misc>Misc>Movement>Humanised Bhop", false),
             CONFIGITEM("Misc>Misc>Movement>Bhop Hitchance", 100),
             CONFIGITEM("Misc>Misc>Movement>Bhop Max Misses", 0),
