@@ -1497,6 +1497,30 @@ src/core/menu/overlay.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3WTuX.dir/build.make CMakeFiles/N3WTuX.dir/src/core/menu/overlay.cpp.s
 .PHONY : src/core/menu/overlay.cpp.s
 
+src/core/menu/tabs/antiaim.o: src/core/menu/tabs/antiaim.cpp.o
+.PHONY : src/core/menu/tabs/antiaim.o
+
+# target to build an object file
+src/core/menu/tabs/antiaim.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3WTuX.dir/build.make CMakeFiles/N3WTuX.dir/src/core/menu/tabs/antiaim.cpp.o
+.PHONY : src/core/menu/tabs/antiaim.cpp.o
+
+src/core/menu/tabs/antiaim.i: src/core/menu/tabs/antiaim.cpp.i
+.PHONY : src/core/menu/tabs/antiaim.i
+
+# target to preprocess a source file
+src/core/menu/tabs/antiaim.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3WTuX.dir/build.make CMakeFiles/N3WTuX.dir/src/core/menu/tabs/antiaim.cpp.i
+.PHONY : src/core/menu/tabs/antiaim.cpp.i
+
+src/core/menu/tabs/antiaim.s: src/core/menu/tabs/antiaim.cpp.s
+.PHONY : src/core/menu/tabs/antiaim.s
+
+# target to generate assembly for a file
+src/core/menu/tabs/antiaim.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3WTuX.dir/build.make CMakeFiles/N3WTuX.dir/src/core/menu/tabs/antiaim.cpp.s
+.PHONY : src/core/menu/tabs/antiaim.cpp.s
+
 src/core/menu/tabs/devwindow.o: src/core/menu/tabs/devwindow.cpp.o
 .PHONY : src/core/menu/tabs/devwindow.o
 
@@ -1616,30 +1640,6 @@ src/core/menu/tabs/rage.s: src/core/menu/tabs/rage.cpp.s
 src/core/menu/tabs/rage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3WTuX.dir/build.make CMakeFiles/N3WTuX.dir/src/core/menu/tabs/rage.cpp.s
 .PHONY : src/core/menu/tabs/rage.cpp.s
-
-src/core/menu/tabs/skinchanger.o: src/core/menu/tabs/skinchanger.cpp.o
-.PHONY : src/core/menu/tabs/skinchanger.o
-
-# target to build an object file
-src/core/menu/tabs/skinchanger.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3WTuX.dir/build.make CMakeFiles/N3WTuX.dir/src/core/menu/tabs/skinchanger.cpp.o
-.PHONY : src/core/menu/tabs/skinchanger.cpp.o
-
-src/core/menu/tabs/skinchanger.i: src/core/menu/tabs/skinchanger.cpp.i
-.PHONY : src/core/menu/tabs/skinchanger.i
-
-# target to preprocess a source file
-src/core/menu/tabs/skinchanger.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3WTuX.dir/build.make CMakeFiles/N3WTuX.dir/src/core/menu/tabs/skinchanger.cpp.i
-.PHONY : src/core/menu/tabs/skinchanger.cpp.i
-
-src/core/menu/tabs/skinchanger.s: src/core/menu/tabs/skinchanger.cpp.s
-.PHONY : src/core/menu/tabs/skinchanger.s
-
-# target to generate assembly for a file
-src/core/menu/tabs/skinchanger.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3WTuX.dir/build.make CMakeFiles/N3WTuX.dir/src/core/menu/tabs/skinchanger.cpp.s
-.PHONY : src/core/menu/tabs/skinchanger.cpp.s
 
 src/core/menu/tabs/visuals.o: src/core/menu/tabs/visuals.cpp.o
 .PHONY : src/core/menu/tabs/visuals.o
@@ -2013,6 +2013,9 @@ help:
 	@echo "... src/core/menu/overlay.o"
 	@echo "... src/core/menu/overlay.i"
 	@echo "... src/core/menu/overlay.s"
+	@echo "... src/core/menu/tabs/antiaim.o"
+	@echo "... src/core/menu/tabs/antiaim.i"
+	@echo "... src/core/menu/tabs/antiaim.s"
 	@echo "... src/core/menu/tabs/devwindow.o"
 	@echo "... src/core/menu/tabs/devwindow.i"
 	@echo "... src/core/menu/tabs/devwindow.s"
@@ -2028,9 +2031,6 @@ help:
 	@echo "... src/core/menu/tabs/rage.o"
 	@echo "... src/core/menu/tabs/rage.i"
 	@echo "... src/core/menu/tabs/rage.s"
-	@echo "... src/core/menu/tabs/skinchanger.o"
-	@echo "... src/core/menu/tabs/skinchanger.i"
-	@echo "... src/core/menu/tabs/skinchanger.s"
 	@echo "... src/core/menu/tabs/visuals.o"
 	@echo "... src/core/menu/tabs/visuals.i"
 	@echo "... src/core/menu/tabs/visuals.s"
