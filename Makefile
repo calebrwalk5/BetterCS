@@ -129,6 +129,30 @@ N3WTuX/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3WTuX.dir/build.make CMakeFiles/N3WTuX.dir/build
 .PHONY : N3WTuX/fast
 
+src/core/features/aimlines.o: src/core/features/aimlines.cpp.o
+.PHONY : src/core/features/aimlines.o
+
+# target to build an object file
+src/core/features/aimlines.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3WTuX.dir/build.make CMakeFiles/N3WTuX.dir/src/core/features/aimlines.cpp.o
+.PHONY : src/core/features/aimlines.cpp.o
+
+src/core/features/aimlines.i: src/core/features/aimlines.cpp.i
+.PHONY : src/core/features/aimlines.i
+
+# target to preprocess a source file
+src/core/features/aimlines.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3WTuX.dir/build.make CMakeFiles/N3WTuX.dir/src/core/features/aimlines.cpp.i
+.PHONY : src/core/features/aimlines.cpp.i
+
+src/core/features/aimlines.s: src/core/features/aimlines.cpp.s
+.PHONY : src/core/features/aimlines.s
+
+# target to generate assembly for a file
+src/core/features/aimlines.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3WTuX.dir/build.make CMakeFiles/N3WTuX.dir/src/core/features/aimlines.cpp.s
+.PHONY : src/core/features/aimlines.cpp.s
+
 src/core/features/antiaim.o: src/core/features/antiaim.cpp.o
 .PHONY : src/core/features/antiaim.o
 
@@ -1842,6 +1866,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... N3WTuX"
+	@echo "... src/core/features/aimlines.o"
+	@echo "... src/core/features/aimlines.i"
+	@echo "... src/core/features/aimlines.s"
 	@echo "... src/core/features/antiaim.o"
 	@echo "... src/core/features/antiaim.i"
 	@echo "... src/core/features/antiaim.s"

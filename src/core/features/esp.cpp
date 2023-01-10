@@ -126,7 +126,6 @@ void drawPlayer(Player* p) {
                 Interfaces::engine->GetPlayerInfo(p->index(), &info);
 
                 if (p->isEnemy()) {
-                    
                     if (CONFIGBOOL("Visuals>Players>Enemies>Vis Check") ? (Globals::localPlayer->health() > 0 ? p->visible() : true) : true) {
                         if (CONFIGBOOL("Visuals>Players>Enemies>Only When Dead") ? (Globals::localPlayer->health() == 0) : true) {
                             std::stringstream rightText;
