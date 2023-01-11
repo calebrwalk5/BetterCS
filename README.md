@@ -16,4 +16,4 @@ Third person<br>
 Better triggerbot<br>
 ### In development
 Skin changer<br>
-Aim lines<br>
+Barrel lines<br>
